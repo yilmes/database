@@ -1,0 +1,38 @@
+-#encoding: utf-8
+!!!5
+%head
+  %meta{:charset=>"utf-8"}
+  %title Recording Database in Ruby Add topic
+  %link{:rel=>"stylesheet",:href=>"/stylesheets/main.css"}
+%body
+  #ana
+    #mesajForm
+      %form{:action=>"/kayit/addTopic",:method=>"post"}
+        %table
+          %tr
+            %td
+              Konu başlığı : 
+            %td
+              %input.input{:name=>"konuB",:type=>"text"}
+          %tr
+            %td
+              Konu:
+            %td
+              %textarea{:name=>"mesaj",:rows=>5,:cols=>25}
+          %tr
+            %td
+            
+            %td
+              %input{:value=>"Gönder",:type=>"submit"}
+      
+    #listForm
+      %h1 Konular
+      %table{:style=>'width:100%;'}
+        -@topics.each do |topic|
+          %tr
+            %td
+              %a.sheader{:href=>"/topicDetay/detay/#{topic.id}"}  #{topic.subject}  
+              %br
+              #{topic.message}
+              %br
+  

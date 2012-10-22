@@ -1,0 +1,70 @@
+body{
+    background-color: #b1c5c3;
+    background-image: url("/images/dot.png");
+    font-family: 'Ubuntu', sans-serif;
+}
+.input{
+    padding: 5px;
+    border: 1px solid #006400;
+    border-radius: 5px;
+    width:215px;
+    }
+#ana
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;   
+}
+#mesajForm
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;  
+    background-color: white;  
+    padding: 5px;
+    border: 1px solid #006400;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 30px gray; 
+}
+#mesajForm table{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+tr{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+#listForm tr:nth-child(odd){
+    background-color:#e3d39b;
+    width: 800px;
+}
+#listForm tr:hover{
+    background-color:#ccc;
+}
+#listForm
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;  
+    background-color: white;  
+    padding: 5px;
+    border: 1px solid #006400;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 0 30px gray; 
+
+}
+.sheader{
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.sheader:hover{
+    text-decoration: underline;
+    color:red;
+}

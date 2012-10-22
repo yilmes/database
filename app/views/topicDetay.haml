@@ -1,0 +1,34 @@
+-#encoding: utf-8
+!!!5
+%head
+  %meta{:charset=>"utf-8"}
+  %title Recording Database in Ruby
+  %link{:rel=>"stylesheet",:href=>"/stylesheets/main.css"}
+%body
+  #sidebar
+    -@topics.each do |topic|
+      %h1 #{topic.subject}
+      #{topic.message}
+      %form{:action=>"/kayit/addComment/#{topic.id}",:method=>"post"}
+        %table
+          %tr
+            %td
+              %h3 #{topic.subject} Konusuna cevap yaz
+          %tr
+            %td
+              Nick : 
+            %td
+              %input{:name=>"nick",:type=>"text"}
+          %tr
+            %td
+              Mesaj:
+            %td
+              %input{:name=>"message",:type=>"text"}
+          %tr
+            %td
+          
+            %td
+              %input.button{:value=>"Gönder",:type=>"submit"}
+    -@comments.each do |comment|
+      %h1 #{comment.nick}
+      #{comment.message}

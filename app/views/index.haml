@@ -1,0 +1,28 @@
+-#encoding: utf-8
+!!!5
+%head
+  %meta{:charset=>"utf-8"}
+  %title Recording Database in Ruby
+  %link{:rel=>"stylesheet",:href=>"/stylesheets/main.css"}
+%body
+  #middle
+    =styled_flash
+    %h1 Hoşgeldiniz!
+    %form{:method=>"post",:action=>"/kayit/new"}
+      User Name : 
+      %input{:name=>"name",:type=>"text"}
+      E-Mail Address :
+      %input{:name=>"mail",:type=>"text"}
+      %input{:value=>"Kayıt Et",:type=>"Submit"}
+
+    %h1.logout Arama
+    %form.mainheader{:method=>"post",:action=>"/search"}
+      %input{:name=>"name",:type=>"text"}
+      %input{:value=>"Ara!",:type=>"submit"}
+    %h1.mainheader Kullanıcılar
+    #middle.logout
+    -@users.each do |user|
+      -if @users
+        #middle.logout
+          %a{:href=>"/profil/goster/#{user.userName}"}#{user.userName}
+          %hr
